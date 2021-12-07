@@ -1,7 +1,8 @@
 $second-color: rgb(253, 229, 89);
 $prime-color: rgb(20, 20, 20);
 $metal-color: rgb(20, 20, 20);
-$purple-color:rgb(201, 80, 201);
+$purple-color: rgb(201, 80, 201);
+$code-color: rgb(0, 255, 0);
 body {
   background-color: $prime-color;
   margin: 0;
@@ -26,7 +27,7 @@ body {
     .displayer-container {
       position: absolute;
       top: -100px;
-      right: -100px;
+      right: -10px;
     }
     .displayer {
       width: 300px;
@@ -38,29 +39,31 @@ body {
       &-texts {
         // position: absolute;
         margin: auto;
-        display: flex;
-        width: 50%;
-        position: absolute;
-        bottom: 100px;
-        left: 40px;
+        width: auto;
+        position: relative;
+        top: 13%;
         height: auto;
-        flex-direction: row;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        text-align: end;
         justify-content: space-between;
 
-        span {
+        p {
+          display: block;
           &:first-of-type {
-            font-size: 400%;
+            font-size: 2rem;
             color: $purple-color;
             text-shadow: 0 0 5px rgb(184, 97, 184);
+            position: relative;
+            // margin-left: 10px;
           }
           &:nth-of-type(2) {
             padding: 2px;
             color: $second-color;
-            position: absolute;
-            left: 70%;
-            top: 80px;
-            font-size: 20px;
+            position: relative;
+            // left: 35%;
+            // top: 80px;
+            font-size: 1rem;
           }
         }
       }
@@ -105,6 +108,43 @@ body {
     border: solid;
     height: 90%;
     background-color: $prime-color;
+    display: flex;
+    .wpm {
+      background-color: $metal-color;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: auto;
+      display: none;
+      code {
+        color: $code-color;
+        display: block;
+        border: $code-color solid 2px;
+        padding: 50px;
+        width: 100px;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+    .timer {
+      width: 100%;
+      height: 100%;
+      background-color: $metal-color;
+      display: flex;
+      .time {
+        margin: auto;
+        width: 50%;
+        height: 50%;
+        background-color: black;
+        display: flex;
+        code {
+          color: $code-color;
+          margin: auto;
+          font-size: 12rem;
+        }
+      }
+    }
   }
 }
-

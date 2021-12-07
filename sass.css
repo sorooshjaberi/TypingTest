@@ -35,7 +35,7 @@ body {
 .test-sec .words .displayer-container {
   position: absolute;
   top: -100px;
-  right: -100px;
+  right: -10px;
 }
 
 .test-sec .words .displayer {
@@ -51,37 +51,39 @@ body {
 
 .test-sec .words .displayer-texts {
   margin: auto;
+  width: auto;
+  position: relative;
+  top: 13%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
-  position: absolute;
-  bottom: 100px;
-  left: 40px;
-  height: auto;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  text-align: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: end;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.test-sec .words .displayer-texts span:first-of-type {
-  font-size: 400%;
-  color: #c950c9;
-  text-shadow: 0 0 5px #b861b8;
+.test-sec .words .displayer-texts p {
+  display: block;
 }
 
-.test-sec .words .displayer-texts span:nth-of-type(2) {
+.test-sec .words .displayer-texts p:first-of-type {
+  font-size: 2rem;
+  color: #c950c9;
+  text-shadow: 0 0 5px #b861b8;
+  position: relative;
+}
+
+.test-sec .words .displayer-texts p:nth-of-type(2) {
   padding: 2px;
   color: #fde559;
-  position: absolute;
-  left: 70%;
-  top: 80px;
-  font-size: 20px;
+  position: relative;
+  font-size: 1rem;
 }
 
 .test-sec .words .inp-container {
@@ -139,5 +141,63 @@ body {
   border: solid;
   height: 90%;
   background-color: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.test-sec .data .wpm {
+  background-color: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: auto;
+  display: none;
+}
+
+.test-sec .data .wpm code {
+  color: lime;
+  display: block;
+  border: lime solid 2px;
+  padding: 50px;
+  width: 100px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.test-sec .data .timer {
+  width: 100%;
+  height: 100%;
+  background-color: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.test-sec .data .timer .time {
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.test-sec .data .timer .time code {
+  color: lime;
+  margin: auto;
+  font-size: 12rem;
 }
 /*# sourceMappingURL=sass.css.map */

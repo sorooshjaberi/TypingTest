@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>typespeed</title>
-    <link rel="stylesheet" href="sass.css">
-</head>
-<body>
+    <link rel="stylesheet" href="sass.css" />
+  </head>
+  <body>
     <section class="test-sec">
-        <div class="words">
-            <div class="displayer-container">
-                <div class="displayer">
-                    <div class="displayer-texts">
-                        <span>hello</span><span>bye</span>
-                    </div>
-                </div>
+      <div class="words">
+        <div class="displayer-container">
+          <div class="displayer">
+            <div class="displayer-texts">
+              <p class="current"></p>
+              <p class="next"></p>
             </div>
-            <div class="inp-container">
-                <input type="text" autofocus  name="" id="" class="inp">
-                <button class="pause">pause</button>
-            </div>
+          </div>
         </div>
-        <div class="data"></div>
+        <div class="inp-container">
+          <input type="text" autofocus name="" id="" class="inp" />
+          <button class="pause">pause</button>
+        </div>
+      </div>
+      <div class="data">
+        <div class="timer">
+          <div class="time">
+            <code>59</code>
+          </div>
+        </div>
+        <div class="wpm">
+          <code class="score"></code>
+          <!-- <code class="wpm-word">wp/m</code> -->
+        </div>
+      </div>
     </section>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
